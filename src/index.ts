@@ -38,3 +38,11 @@ let numbers = [1, 2, 3, 4, 5];
 // let numbers: number[] = [1, 2, 3, 4, '5']; Error would show immediately
 // When using an empty array, add type or it will assume its type of any for the array.
 let numbersAny: number[] = [];
+
+// Tuples
+// Tuples is a fixed length array where each element has a particular type has two values.
+let user: [number, string] = [1, "Boo"];
+// Tuples will always have 2 values.
+let book: [number, boolean] = [250, true];
+// Values printed must be type in the order they were initialised in.
+// Think of tuples as key value pairs.
