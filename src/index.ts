@@ -24,8 +24,17 @@ level = 1;
 level = 'a';
 //Should be avoided as if not initialised when created, compiler thinks its a type any.
 
-function render(document) {
-    console.log(document);
-}
+// function render(document) {
+//     console.log(document);
+// }
 // We could add type any, but the point of using TS is to be strongly typed.
 // In tsconfig file set no Implicity to false and this error disappears.
+
+// Arrays
+let numbers = [1, 2, 3, 4, 5];
+// The annotation is not required as TS knows its an array of type numbers
+// let numbers: number[] = [1, 2, 3, 4, 5]; Annotation Removed
+// A value in teh array that is incorrect would throw an error immediately.
+// let numbers: number[] = [1, 2, 3, 4, '5']; Error would show immediately
+// When using an empty array, add type or it will assume its type of any for the array.
+let numbersAny: number[] = [];
